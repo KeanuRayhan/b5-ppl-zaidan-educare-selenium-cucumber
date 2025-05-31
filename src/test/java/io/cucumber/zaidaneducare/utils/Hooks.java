@@ -10,7 +10,7 @@ public class Hooks {
     @Before
     public void setUp() {
         // Initialize WebDriver sebelum setiap skenario
-        DriverManager.initializeDriver("chrome");
+        DriverManager.initializeDriver("edge");
     }
     
     @After

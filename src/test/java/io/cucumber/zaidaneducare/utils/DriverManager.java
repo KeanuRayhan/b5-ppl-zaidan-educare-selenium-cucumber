@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import java.time.Duration;
 
 public class DriverManager {
@@ -24,19 +26,21 @@ public class DriverManager {
                 chromeOptions.addArguments("--disable-dev-shm-usage");
                 chromeOptions.addArguments("--disable-web-security");
                 chromeOptions.addArguments("--allow-running-insecure-content");
-                // Uncomment untuk headless mode
-                // chromeOptions.addArguments("--headless");
                 driver = new ChromeDriver(chromeOptions);
                 break;
                 
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
-                // Uncomment untuk headless mode
-                // firefoxOptions.addArguments("--headless");
                 driver = new FirefoxDriver(firefoxOptions);
                 break;
                 
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                EdgeOptions edgeOptions = new EdgeOptions();
+                driver = new EdgeDriver(edgeOptions);
+                break;
+
             default:
                 throw new IllegalArgumentException("Browser not supported: " + browserName);
         }
