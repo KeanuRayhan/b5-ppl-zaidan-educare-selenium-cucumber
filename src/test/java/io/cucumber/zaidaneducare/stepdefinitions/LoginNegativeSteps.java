@@ -1,5 +1,5 @@
 package io.cucumber.zaidaneducare.stepdefinitions;
 
-public class LoginSteps {
+public class LoginNegativeSteps {
     
 }

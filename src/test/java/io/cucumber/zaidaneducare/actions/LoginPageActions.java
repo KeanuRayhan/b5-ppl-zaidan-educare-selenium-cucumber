@@ -1,10 +1,14 @@
 package io.cucumber.zaidaneducare.actions;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import io.cucumber.zaidaneducare.locators.LoginPageLocators;
 
@@ -61,6 +65,14 @@ public class LoginPageActions {
 
     public String getUsernameDashboard() {
         return loginPageLocators.usernameDashboard.getText();
+    }
+
+    public List<String> getSidebarItemsText() {
+        List<String> items = new ArrayList<>();
+        for (WebElement item : loginPageLocators.sidebarItems) {
+            items.add(item.getText().trim());
+        }
+        return items;
     }
 
 }
