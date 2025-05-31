@@ -1,19 +1,16 @@
 package io.cucumber.zaidaneducare.stepdefinitions;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.And;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import java.time.Duration;
 
 import io.cucumber.zaidaneducare.utils.DriverManager;
 import io.cucumber.zaidaneducare.actions.LoginPageActions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class AccessLoginPageSteps {
+public class LoginPositiveSteps {
 
     WebDriver driver;
     LoginPageActions loginPage;
