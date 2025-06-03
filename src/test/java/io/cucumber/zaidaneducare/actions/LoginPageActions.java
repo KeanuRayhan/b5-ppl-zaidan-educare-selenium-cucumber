@@ -75,4 +75,9 @@ public class LoginPageActions {
         return items;
     }
 
+    public String getLoginFailedMessage() {
+        wait.until(ExpectedConditions.visibilityOf(loginPageLocators.loginFailedNotification));
+        return loginPageLocators.loginFailedNotification.getText().trim();
+    }
+
 }

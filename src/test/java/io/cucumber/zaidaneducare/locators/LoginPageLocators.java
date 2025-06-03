@@ -31,5 +31,6 @@ public class LoginPageLocators {
     @FindBy(xpath = "//ul/li/a/span")
     public List<WebElement> sidebarItems;
 
-
+    @FindBy(xpath = "/html/body/div[2]/div/div[2]/div/div/div[2]")
+    public WebElement loginFailedNotification;
 }
